@@ -71,7 +71,7 @@ function host_module {
     local content="\h"
   fi
   PS1+=$(section_end $fg_color $bg_color)
-  PS1+=$(section_content $fg_color $bg_color " $content ")
+  PS1+=$(section_content $fg_color $bg_color)
   __last_color=$bg_color
 }
 
@@ -90,7 +90,6 @@ function path_module {
   elif [ $3 -gt 1 ]; then
     PROMPT_DIRTRIM=$3
   fi
-  PS1+=$(section_end $fg_color $bg_color)
   PS1+=$(section_content $fg_color $bg_color " $content ")
   __last_color=$bg_color
 }
